@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 20px;
 }
+
 .formulario {
   max-width: 800px;
   margin: 0 auto 40px auto;
@@ -11,11 +12,13 @@ body {
   padding: 30px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 label {
   display: block;
   margin-top: 15px;
   font-weight: bold;
 }
+
 input, textarea {
   width: 100%;
   padding: 8px;
@@ -23,22 +26,54 @@ input, textarea {
   margin-top: 5px;
   box-sizing: border-box;
 }
+
+.capa-preview-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .capa-preview {
-  width: 595px;
-  height: 842px;
+  width: 595px;   /* A4 largura */
+  height: 842px;  /* A4 altura */
   background: white;
-  margin: 0 auto;
-  padding: 90px 70px 70px 108px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 90px 70px 70px 108px; /* Margens ABNT */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  position: relative;
   line-height: 1.5;
   text-align: center;
 }
+
 .capa-preview img {
-  max-width: 200px;
-  max-height: 100px;
-  margin-bottom: 20px;
+  max-width: 180px;
+  max-height: 120px;
+  margin-bottom: 30px;
+}
+
+.bloco {
+  font-size: 12pt;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-style: italic;
+  margin-bottom: 60px;
+}
+
+.espacamento-1 {
+  margin-top: 30px;
+}
+
+.espacamento-2 {
+  margin-top: 10px;
+}
+
+.espacamento-3 {
+  margin-top: 40px;
+}
+
+.espaco-grande {
+  flex-grow: 1;
 }
