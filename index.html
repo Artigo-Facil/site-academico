@@ -2,41 +2,49 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Trabalho Acadêmico</title>
+  <title>Capa ABNT - Visualização</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Gerador de Trabalho ABNT</h1>
+  <div class="formulario">
+    <h2>Preencha os dados da capa</h2>
+
+    <label for="logoUrl">URL da logo (PNG/JPG):</label>
+    <input type="text" id="logoUrl" placeholder="https://exemplo.com/logo.png" oninput="atualizarCapa()">
+
+    <label for="instituicao">Nome da Instituição:</label>
+    <input type="text" id="instituicao" oninput="atualizarCapa()">
+
+    <label for="autor">Nome do Autor:</label>
+    <input type="text" id="autor" oninput="atualizarCapa()">
 
     <label for="titulo">Título do Trabalho:</label>
-    <input type="text" id="titulo" placeholder="Digite o título">
+    <input type="text" id="titulo" oninput="atualizarCapa()">
 
-    <label for="autor">Autor:</label>
-    <input type="text" id="autor" placeholder="Seu nome completo">
+    <label for="subtitulo">Subtítulo (opcional):</label>
+    <input type="text" id="subtitulo" oninput="atualizarCapa()">
 
-    <label for="instituicao">Instituição:</label>
-    <input type="text" id="instituicao" placeholder="Nome da instituição">
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" oninput="atualizarCapa()">
 
-    <label for="resumo">Resumo:</label>
-    <textarea id="resumo" rows="5" placeholder="Digite o resumo"></textarea>
-
-    <label for="introducao">Introdução:</label>
-    <textarea id="introducao" rows="6" placeholder="Digite a introdução"></textarea>
-
-    <label for="desenvolvimento">Desenvolvimento:</label>
-    <textarea id="desenvolvimento" rows="8" placeholder="Digite o desenvolvimento"></textarea>
-
-    <label for="conclusao">Conclusão:</label>
-    <textarea id="conclusao" rows="5" placeholder="Digite a conclusão"></textarea>
-
-    <label for="referencias">Referências:</label>
-    <textarea id="referencias" rows="5" placeholder="Digite as referências"></textarea>
-
-    <button onclick="gerarPDF()">Exportar como PDF</button>
+    <label for="ano">Ano:</label>
+    <input type="text" id="ano" oninput="atualizarCapa()">
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <div class="capa-preview" id="preview">
+    <img id="preview-logo" style="display: none;">
+    <div id="preview-instituicao"></div>
+    <br>
+    <div id="preview-autor"></div>
+    <br>
+    <div id="preview-titulo"></div>
+    <br>
+    <div id="preview-subtitulo" style="font-style: italic;"></div>
+    <br><br><br>
+    <div id="preview-cidade"></div>
+    <div id="preview-ano"></div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
