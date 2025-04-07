@@ -2,6 +2,8 @@ let larguraLogo = 200;
 
 function atualizarCapa() {
   const instituicao = document.getElementById("instituicao").value;
+  const departamento = document.getElementById("departamento").value;
+  const curso = document.getElementById("curso").value;
   const autor = document.getElementById("autor").value;
   const titulo = document.getElementById("titulo").value;
   const subtitulo = document.getElementById("subtitulo").value;
@@ -12,9 +14,11 @@ function atualizarCapa() {
   const logoEl = document.getElementById("preview-logo");
 
   document.getElementById("preview-instituicao").innerText = instituicao.toUpperCase();
+  document.getElementById("preview-departamento").innerText = departamento.toUpperCase();
+  document.getElementById("preview-curso").innerText = curso.toUpperCase();
   document.getElementById("preview-autor").innerText = autor.toUpperCase();
   document.getElementById("preview-titulo").innerText = titulo.toUpperCase();
-  document.getElementById("preview-subtitulo").innerText = subtitulo || "";
+  document.getElementById("preview-subtitulo").innerText = subtitulo;
   document.getElementById("preview-cidade").innerText = cidade.toUpperCase();
   document.getElementById("preview-ano").innerText = ano;
 
