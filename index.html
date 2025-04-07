@@ -61,14 +61,35 @@
     <button onclick="gerarPDF()" style="margin-top: 20px;">Exportar como PDF</button>
   </div>
 
-  <!-- Outras seções -->
+  <!-- SEÇÕES VAZIAS -->
   <div class="formulario" id="secao-folha" style="display:none;"><h2>Folha de Rosto (em breve)</h2></div>
   <div class="formulario" id="secao-dedicatoria" style="display:none;"><h2>Dedicatória (em breve)</h2></div>
   <div class="formulario" id="secao-agradecimentos" style="display:none;"><h2>Agradecimentos (em breve)</h2></div>
   <div class="formulario" id="secao-resumo" style="display:none;"><h2>Resumo (em breve)</h2></div>
   <div class="formulario" id="secao-sumario" style="display:none;"><h2>Sumário (em breve)</h2></div>
   <div class="formulario" id="secao-introducao" style="display:none;"><h2>Introdução (em breve)</h2></div>
-  <div class="formulario" id="secao-desenvolvimento" style="display:none;"><h2>Desenvolvimento (em breve)</h2></div>
+
+  <!-- DESENVOLVIMENTO COM CAPÍTULOS -->
+  <div class="formulario" id="secao-desenvolvimento" style="display:none;">
+    <h2>Desenvolvimento</h2>
+    <div id="capitulos-container">
+      <div class="capitulo">
+        <h3>Capítulo 1</h3>
+        <textarea placeholder="Conteúdo do Capítulo 1..."></textarea>
+      </div>
+      <div class="capitulo">
+        <h3>Capítulo 2</h3>
+        <textarea placeholder="Conteúdo do Capítulo 2..."></textarea>
+      </div>
+      <div class="capitulo">
+        <h3>Capítulo 3</h3>
+        <textarea placeholder="Conteúdo do Capítulo 3..."></textarea>
+      </div>
+    </div>
+    <button onclick="adicionarCapitulo()">➕ Adicionar Capítulo</button>
+  </div>
+
+  <!-- DEMAIS SEÇÕES -->
   <div class="formulario" id="secao-conclusao" style="display:none;"><h2>Conclusão (em breve)</h2></div>
   <div class="formulario" id="secao-referencias" style="display:none;"><h2>Referências (em breve)</h2></div>
   <div class="formulario" id="secao-apendices" style="display:none;"><h2>Apêndices (em breve)</h2></div>
