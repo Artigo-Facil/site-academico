@@ -1,3 +1,5 @@
+let larguraLogo = 200;
+
 function atualizarCapa() {
   document.getElementById("preview-instituicao").innerText = document.getElementById("instituicao").value.toUpperCase();
   document.getElementById("preview-autor").innerText = document.getElementById("autor").value.toUpperCase();
@@ -14,7 +16,14 @@ function atualizarCapa() {
   if (logoUrl) {
     logoEl.src = logoUrl;
     logoEl.style.display = "block";
+    logoEl.style.maxWidth = larguraLogo + "px";
   } else {
     logoEl.style.display = "none";
   }
+}
+
+function ajustarLogo(delta) {
+  larguraLogo = Math.min(250, Math.max(100, larguraLogo + delta));
+  const logoEl = document.getElementById("preview-logo");
+  logoEl.style.maxWidth = larguraLogo + "px";
 }
