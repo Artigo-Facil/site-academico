@@ -47,3 +47,15 @@ function atualizarEstadoBotoes() {
   document.getElementById("btn-aumentar").disabled = larguraLogo >= 250;
   document.getElementById("btn-diminuir").disabled = larguraLogo <= 100;
 }
+
+function gerarPDF() {
+  const elemento = document.getElementById("preview");
+  const opt = {
+    margin: 0,
+    filename: 'capa-abnt.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
+  };
+  html2pdf().set(opt).from(elemento).save();
+}
