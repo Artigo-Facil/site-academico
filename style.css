@@ -19,7 +19,7 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input {
   width: 100%;
   padding: 8px;
   font-size: 14px;
@@ -27,53 +27,36 @@ input, textarea {
   box-sizing: border-box;
 }
 
-.capa-preview-wrapper {
+.capa-preview {
+  width: 595px;  /* A4 horizontalmente */
+  height: 842px; /* A4 verticalmente */
+  background: white;
+  margin: 0 auto;
+  padding: 3cm 2cm 2cm 3cm; /* Margens ABNT */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.capa-preview {
-  width: 595px;   /* A4 largura */
-  height: 842px;  /* A4 altura */
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  padding: 90px 70px 70px 108px; /* Margens ABNT */
+.capa-conteudo {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
-  position: relative;
-  line-height: 1.5;
   text-align: center;
+  line-height: 1.5;
 }
 
 .capa-preview img {
-  max-width: 180px;
+  max-width: 200px;
   max-height: 120px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .bloco {
+  margin-bottom: 5px;
   font-size: 12pt;
-  margin-bottom: 10px;
-}
-
-.subtitulo {
-  font-style: italic;
-  margin-bottom: 60px;
-}
-
-.espacamento-1 {
-  margin-top: 30px;
-}
-
-.espacamento-2 {
-  margin-top: 10px;
-}
-
-.espacamento-3 {
-  margin-top: 40px;
-}
-
-.espaco-grande {
-  flex-grow: 1;
 }
