@@ -33,68 +33,47 @@ input, textarea {
 }
 
 .capa-preview {
-  width: 595px;
-  height: 842px;
+  width: 595px;   /* A4 largura */
+  height: 842px;  /* A4 altura */
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 90px 70px 70px 108px; /* Margens ABNT */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  padding: 0;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .capa-preview img {
-  max-width: 120px;
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 180px;
+  max-height: 120px;
+  margin-bottom: 30px;
 }
 
-.instituicao {
-  position: absolute;
-  top: 120px;
-  width: 100%;
-  text-align: center;
+.bloco {
   font-size: 12pt;
-  line-height: 1.5;
-}
-
-.autor {
-  position: absolute;
-  top: 340px;
-  width: 100%;
-  text-align: center;
-  font-size: 12pt;
-}
-
-.coautor {
-  position: absolute;
-  top: 370px;
-  width: 100%;
-  text-align: center;
-  font-size: 12pt;
-}
-
-.titulo {
-  position: absolute;
-  top: 480px;
-  width: 100%;
-  text-align: center;
-  font-size: 12pt;
+  margin-bottom: 10px;
 }
 
 .subtitulo {
-  position: absolute;
-  top: 510px;
-  width: 100%;
-  text-align: center;
-  font-size: 12pt;
   font-style: italic;
+  margin-bottom: 60px;
 }
 
-.rodape {
-  position: absolute;
-  bottom: 70px;
-  width: 100%;
-  text-align: center;
-  font-size: 12pt;
+.espacamento-1 {
+  margin-top: 30px;
+}
+
+.espacamento-2 {
+  margin-top: 10px;
+}
+
+.espacamento-3 {
+  margin-top: 40px;
+}
+
+.espaco-grande {
+  flex-grow: 1;
 }
