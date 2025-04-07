@@ -7,9 +7,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-  <div class="formulario">
-    <h2>Preencha os dados da capa</h2>
+  <!-- MENU FIXO HORIZONTAL -->
+  <nav class="menu">
+    <button onclick="mostrarSecao('capa')">📄 Capa</button>
+    <button onclick="mostrarSecao('folha')">📝 Rosto</button>
+    <button onclick="mostrarSecao('dedicatoria')">💌 Dedicatória</button>
+    <button onclick="mostrarSecao('agradecimentos')">🙏 Agradecimentos</button>
+    <button onclick="mostrarSecao('resumo')">🧠 Resumo</button>
+    <button onclick="mostrarSecao('sumario')">📚 Sumário</button>
+    <button onclick="mostrarSecao('introducao')">🔎 Introdução</button>
+    <button onclick="mostrarSecao('desenvolvimento')">📖 Desenvolvimento</button>
+    <button onclick="mostrarSecao('conclusao')">✅ Conclusão</button>
+    <button onclick="mostrarSecao('referencias')">📌 Referências</button>
+    <button onclick="mostrarSecao('apendices')">📎 Apêndices</button>
+    <button onclick="mostrarSecao('anexos')">📂 Anexos</button>
+  </nav>
 
+  <!-- SEÇÃO: CAPA -->
+  <div class="formulario" id="secao-capa">
+    <h2>Preencha os dados da capa</h2>
     <label for="logoUrl">URL da logo (PNG/JPG):</label>
     <input type="text" id="logoUrl" placeholder="https://exemplo.com/logo.png" oninput="atualizarCapa()">
 
@@ -45,24 +61,32 @@
     <button onclick="gerarPDF()" style="margin-top: 20px;">Exportar como PDF</button>
   </div>
 
+  <!-- Outras seções -->
+  <div class="formulario" id="secao-folha" style="display:none;"><h2>Folha de Rosto (em breve)</h2></div>
+  <div class="formulario" id="secao-dedicatoria" style="display:none;"><h2>Dedicatória (em breve)</h2></div>
+  <div class="formulario" id="secao-agradecimentos" style="display:none;"><h2>Agradecimentos (em breve)</h2></div>
+  <div class="formulario" id="secao-resumo" style="display:none;"><h2>Resumo (em breve)</h2></div>
+  <div class="formulario" id="secao-sumario" style="display:none;"><h2>Sumário (em breve)</h2></div>
+  <div class="formulario" id="secao-introducao" style="display:none;"><h2>Introdução (em breve)</h2></div>
+  <div class="formulario" id="secao-desenvolvimento" style="display:none;"><h2>Desenvolvimento (em breve)</h2></div>
+  <div class="formulario" id="secao-conclusao" style="display:none;"><h2>Conclusão (em breve)</h2></div>
+  <div class="formulario" id="secao-referencias" style="display:none;"><h2>Referências (em breve)</h2></div>
+  <div class="formulario" id="secao-apendices" style="display:none;"><h2>Apêndices (em breve)</h2></div>
+  <div class="formulario" id="secao-anexos" style="display:none;"><h2>Anexos (em breve)</h2></div>
+
+  <!-- VISUALIZAÇÃO DA CAPA -->
   <div class="capa-preview" id="preview">
     <div class="capa-conteudo">
       <img id="preview-logo" style="display: none;">
       <div class="bloco" id="preview-instituicao"></div>
       <div class="bloco" id="preview-departamento"></div>
       <div class="bloco" id="preview-curso"></div>
-
       <div style="height: 48px;"></div>
-
       <div class="bloco" id="preview-autor"></div>
-
       <div style="height: 256px;"></div>
-
       <div class="bloco" id="preview-titulo"></div>
       <div class="bloco" id="preview-subtitulo" style="font-style: italic;"></div>
-
       <div style="height: 320px;"></div>
-
       <div class="bloco" id="preview-cidade"></div>
       <div class="bloco" id="preview-ano"></div>
     </div>
