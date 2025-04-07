@@ -1,7 +1,7 @@
 function atualizarCapa() {
   document.getElementById("preview-instituicao").innerText = document.getElementById("instituicao").value.toUpperCase();
+  document.getElementById("preview-departamento").innerText = document.getElementById("departamento").value.toUpperCase();
   document.getElementById("preview-autor").innerText = document.getElementById("autor").value.toUpperCase();
-  document.getElementById("preview-coautor").innerText = document.getElementById("coautor").value.toUpperCase();
   document.getElementById("preview-titulo").innerText = document.getElementById("titulo").value.toUpperCase();
 
   const subtitulo = document.getElementById("subtitulo").value;
