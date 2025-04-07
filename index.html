@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Capa ABNT - Visualização</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
   <div class="formulario">
@@ -40,6 +41,8 @@
 
     <label for="ano">Ano:</label>
     <input type="text" id="ano" oninput="atualizarCapa()">
+
+    <button onclick="gerarPDF()" style="margin-top: 20px;">Exportar como PDF</button>
   </div>
 
   <div class="capa-preview" id="preview">
@@ -49,16 +52,16 @@
       <div class="bloco" id="preview-departamento"></div>
       <div class="bloco" id="preview-curso"></div>
 
-      <div style="height: 48px;"></div> <!-- ~3 espaços -->
+      <div style="height: 48px;"></div>
 
       <div class="bloco" id="preview-autor"></div>
 
-      <div style="height: 256px;"></div> <!-- ~16 espaços -->
+      <div style="height: 256px;"></div>
 
       <div class="bloco" id="preview-titulo"></div>
       <div class="bloco" id="preview-subtitulo" style="font-style: italic;"></div>
 
-      <div style="height: 320px;"></div> <!-- ~20 espaços -->
+      <div style="height: 320px;"></div>
 
       <div class="bloco" id="preview-cidade"></div>
       <div class="bloco" id="preview-ano"></div>
