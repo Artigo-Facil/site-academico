@@ -18,9 +18,6 @@
     <label for="autor">Nome do Autor:</label>
     <input type="text" id="autor" oninput="atualizarCapa()">
 
-    <label for="coautor">Nome do Coautor (opcional):</label>
-    <input type="text" id="coautor" oninput="atualizarCapa()">
-
     <label for="titulo">Título do Trabalho:</label>
     <input type="text" id="titulo" oninput="atualizarCapa()">
 
@@ -34,15 +31,16 @@
     <input type="text" id="ano" oninput="atualizarCapa()">
   </div>
 
-  <div class="capa-preview-wrapper">
-    <div class="capa-preview" id="preview">
+  <div class="capa-preview" id="preview">
+    <div class="capa-conteudo">
       <img id="preview-logo" style="display: none;">
-      <div id="preview-instituicao" class="bloco espacamento-1"></div>
-      <div id="preview-autor" class="bloco espacamento-2"></div>
-      <div id="preview-coautor" class="bloco espacamento-2"></div>
-      <div id="preview-titulo" class="bloco espacamento-3"></div>
-      <div id="preview-subtitulo" class="bloco subtitulo"></div>
-      <div class="espaco-grande"></div>
+      <div id="preview-instituicao" class="bloco"></div>
+      <div style="height: 40px;"></div>
+      <div id="preview-autor" class="bloco"></div>
+      <div style="height: 40px;"></div>
+      <div id="preview-titulo" class="bloco"></div>
+      <div id="preview-subtitulo" class="bloco" style="font-style: italic;"></div>
+      <div style="flex: 1;"></div>
       <div id="preview-cidade" class="bloco"></div>
       <div id="preview-ano" class="bloco"></div>
     </div>
