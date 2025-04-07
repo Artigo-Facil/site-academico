@@ -18,6 +18,9 @@
     <label for="autor">Nome do Autor:</label>
     <input type="text" id="autor" oninput="atualizarCapa()">
 
+    <label for="coautor">Nome do Coautor (opcional):</label>
+    <input type="text" id="coautor" oninput="atualizarCapa()">
+
     <label for="titulo">Título do Trabalho:</label>
     <input type="text" id="titulo" oninput="atualizarCapa()">
 
@@ -31,18 +34,19 @@
     <input type="text" id="ano" oninput="atualizarCapa()">
   </div>
 
-  <div class="capa-preview" id="preview">
-    <img id="preview-logo" style="display: none;">
-    <div id="preview-instituicao"></div>
-    <br>
-    <div id="preview-autor"></div>
-    <br>
-    <div id="preview-titulo"></div>
-    <br>
-    <div id="preview-subtitulo" style="font-style: italic;"></div>
-    <br><br><br>
-    <div id="preview-cidade"></div>
-    <div id="preview-ano"></div>
+  <div class="capa-preview-wrapper">
+    <div class="capa-preview" id="preview">
+      <img id="preview-logo" style="display: none;">
+      <div id="preview-instituicao" class="instituicao"></div>
+      <div id="preview-autor" class="autor"></div>
+      <div id="preview-coautor" class="coautor"></div>
+      <div id="preview-titulo" class="titulo"></div>
+      <div id="preview-subtitulo" class="subtitulo"></div>
+      <div class="rodape">
+        <div id="preview-cidade"></div>
+        <div id="preview-ano"></div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
