@@ -11,7 +11,6 @@ function atualizarCapa() {
 
   const logoEl = document.getElementById("preview-logo");
 
-  // Atualiza os textos da capa
   document.getElementById("preview-instituicao").innerText = instituicao.toUpperCase();
   document.getElementById("preview-autor").innerText = autor.toUpperCase();
   document.getElementById("preview-titulo").innerText = titulo.toUpperCase();
@@ -19,25 +18,28 @@ function atualizarCapa() {
   document.getElementById("preview-cidade").innerText = cidade.toUpperCase();
   document.getElementById("preview-ano").innerText = ano;
 
-  // Atualiza a logo
   if (logoUrl) {
-    // Força recarregamento mesmo se for o mesmo src
-    if (logoEl.src !== logoUrl) {
-      logoEl.src = logoUrl;
-    }
+    logoEl.src = logoUrl;
     logoEl.style.display = "block";
-    logoEl.style.maxWidth = larguraLogo + "px";
+    logoEl.style.width = larguraLogo + "px";
   } else {
     logoEl.style.display = "none";
   }
+
+  atualizarEstadoBotoes();
 }
 
 function ajustarLogo(delta) {
-  larguraLogo = Math.max(100, Math.min(250, larguraLogo + delta));
-
+  larguraLogo = Math.min(250, Math.max(100, larguraLogo + delta));
   const logoEl = document.getElementById("preview-logo");
-
-  if (logoEl && logoEl.style.display !== "none") {
-    logoEl.style.maxWidth = larguraLogo + "px";
+  if (logoEl.style.display !== "none") {
+    logoEl.style.width = larguraLogo + "px";
   }
+
+  atualizarEstadoBotoes();
+}
+
+function atualizarEstadoBotoes() {
+  document.getElementById("btn-aumentar").disabled = larguraLogo >= 250;
+  document.getElementById("btn-diminuir").disabled = larguraLogo <= 100;
 }
