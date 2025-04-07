@@ -68,3 +68,21 @@ function mostrarSecao(secaoId) {
     secaoAtiva.style.display = 'block';
   }
 }
+
+function adicionarCapitulo() {
+  const container = document.getElementById("capitulos-container");
+  const total = container.querySelectorAll(".capitulo").length + 1;
+
+  const novo = document.createElement("div");
+  novo.classList.add("capitulo");
+
+  const titulo = document.createElement("h3");
+  titulo.innerText = `Capítulo ${total}`;
+
+  const textarea = document.createElement("textarea");
+  textarea.placeholder = `Conteúdo do Capítulo ${total}...`;
+
+  novo.appendChild(titulo);
+  novo.appendChild(textarea);
+  container.appendChild(novo);
+}
