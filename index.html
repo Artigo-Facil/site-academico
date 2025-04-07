@@ -20,6 +20,12 @@
     <label for="instituicao">Nome da Instituição:</label>
     <input type="text" id="instituicao" oninput="atualizarCapa()">
 
+    <label for="departamento">Departamento/Unidade:</label>
+    <input type="text" id="departamento" oninput="atualizarCapa()">
+
+    <label for="curso">Curso ou Tipo de Curso:</label>
+    <input type="text" id="curso" oninput="atualizarCapa()">
+
     <label for="autor">Nome do Autor:</label>
     <input type="text" id="autor" oninput="atualizarCapa()">
 
@@ -39,15 +45,23 @@
   <div class="capa-preview" id="preview">
     <div class="capa-conteudo">
       <img id="preview-logo" style="display: none;">
-      <div id="preview-instituicao" class="bloco"></div>
-      <div style="height: 40px;"></div>
-      <div id="preview-autor" class="bloco"></div>
-      <div style="height: 40px;"></div>
-      <div id="preview-titulo" class="bloco"></div>
-      <div id="preview-subtitulo" class="bloco" style="font-style: italic;"></div>
-      <div style="flex: 1;"></div>
-      <div id="preview-cidade" class="bloco"></div>
-      <div id="preview-ano" class="bloco"></div>
+      <div class="bloco" id="preview-instituicao"></div>
+      <div class="bloco" id="preview-departamento"></div>
+      <div class="bloco" id="preview-curso"></div>
+
+      <div style="height: 48px;"></div> <!-- ~3 espaços -->
+
+      <div class="bloco" id="preview-autor"></div>
+
+      <div style="height: 256px;"></div> <!-- ~16 espaços -->
+
+      <div class="bloco" id="preview-titulo"></div>
+      <div class="bloco" id="preview-subtitulo" style="font-style: italic;"></div>
+
+      <div style="height: 320px;"></div> <!-- ~20 espaços -->
+
+      <div class="bloco" id="preview-cidade"></div>
+      <div class="bloco" id="preview-ano"></div>
     </div>
   </div>
 
