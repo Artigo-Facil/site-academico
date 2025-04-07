@@ -19,7 +19,7 @@ label {
   font-weight: bold;
 }
 
-input {
+input, textarea {
   width: 100%;
   padding: 8px;
   font-size: 14px;
@@ -27,83 +27,73 @@ input {
   box-sizing: border-box;
 }
 
-.capa-wrapper {
+.capa-preview-wrapper {
   display: flex;
   justify-content: center;
 }
 
 .capa-preview {
-  position: relative;
   width: 595px;
   height: 842px;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  margin-bottom: 40px;
+  position: relative;
+  padding: 0;
 }
 
-.capa-logo {
+.capa-preview img {
+  max-width: 120px;
   position: absolute;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 100px;
-  max-height: 100px;
 }
 
-.capa-instituicao {
+.instituicao {
   position: absolute;
-  top: 160px;
+  top: 120px;
   width: 100%;
   text-align: center;
   font-size: 12pt;
-  font-weight: bold;
+  line-height: 1.5;
 }
 
-.capa-departamento {
+.autor {
   position: absolute;
-  top: 185px;
-  width: 100%;
-  text-align: center;
-  font-size: 12pt;
-}
-
-.capa-autor {
-  position: absolute;
-  top: 350px;
+  top: 340px;
   width: 100%;
   text-align: center;
   font-size: 12pt;
 }
 
-.capa-titulo {
+.coautor {
+  position: absolute;
+  top: 370px;
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
+}
+
+.titulo {
   position: absolute;
   top: 480px;
   width: 100%;
   text-align: center;
   font-size: 12pt;
-  font-weight: bold;
 }
 
-.capa-subtitulo {
+.subtitulo {
   position: absolute;
-  top: 505px;
+  top: 510px;
   width: 100%;
   text-align: center;
   font-size: 12pt;
   font-style: italic;
 }
 
-.capa-cidade {
+.rodape {
   position: absolute;
-  bottom: 60px;
-  width: 100%;
-  text-align: center;
-  font-size: 12pt;
-}
-
-.capa-ano {
-  position: absolute;
-  bottom: 40px;
+  bottom: 70px;
   width: 100%;
   text-align: center;
   font-size: 12pt;
