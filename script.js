@@ -59,3 +59,12 @@ function gerarPDF() {
   };
   html2pdf().set(opt).from(elemento).save();
 }
+
+function mostrarSecao(secaoId) {
+  const secoes = document.querySelectorAll('.formulario');
+  secoes.forEach(secao => secao.style.display = 'none');
+  const secaoAtiva = document.getElementById(`secao-${secaoId}`);
+  if (secaoAtiva) {
+    secaoAtiva.style.display = 'block';
+  }
+}
