@@ -19,7 +19,7 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input {
   width: 100%;
   padding: 8px;
   font-size: 14px;
@@ -27,53 +27,84 @@ input, textarea {
   box-sizing: border-box;
 }
 
-.capa-preview-wrapper {
+.capa-wrapper {
   display: flex;
   justify-content: center;
 }
 
 .capa-preview {
-  width: 595px;   /* A4 largura */
-  height: 842px;  /* A4 altura */
+  position: relative;
+  width: 595px;
+  height: 842px;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  padding: 90px 70px 70px 108px; /* Margens ABNT */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.capa-logo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.capa-instituicao {
+  position: absolute;
+  top: 160px;
+  width: 100%;
   text-align: center;
-}
-
-.capa-preview img {
-  max-width: 180px;
-  max-height: 120px;
-  margin-bottom: 30px;
-}
-
-.bloco {
   font-size: 12pt;
-  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.subtitulo {
+.capa-departamento {
+  position: absolute;
+  top: 185px;
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
+}
+
+.capa-autor {
+  position: absolute;
+  top: 350px;
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
+}
+
+.capa-titulo {
+  position: absolute;
+  top: 480px;
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.capa-subtitulo {
+  position: absolute;
+  top: 505px;
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
   font-style: italic;
-  margin-bottom: 60px;
 }
 
-.espacamento-1 {
-  margin-top: 30px;
+.capa-cidade {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
 }
 
-.espacamento-2 {
-  margin-top: 10px;
-}
-
-.espacamento-3 {
-  margin-top: 40px;
-}
-
-.espaco-grande {
-  flex-grow: 1;
+.capa-ano {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
 }
