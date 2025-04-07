@@ -12,6 +12,11 @@
     <label for="logoUrl">URL da logo (PNG/JPG):</label>
     <input type="text" id="logoUrl" placeholder="https://exemplo.com/logo.png" oninput="atualizarCapa()">
 
+    <div style="margin-top: 10px;">
+      <button onclick="ajustarLogo(+10)">Aumentar Logo</button>
+      <button onclick="ajustarLogo(-10)">Diminuir Logo</button>
+    </div>
+
     <label for="instituicao">Nome da Instituição:</label>
     <input type="text" id="instituicao" oninput="atualizarCapa()">
 
