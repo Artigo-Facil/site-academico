@@ -69,6 +69,21 @@ function mostrarSecao(secaoId) {
   }
 }
 
+// Folha de rosto
+function atualizarFolha() {
+  document.getElementById("folha-preview-instituicao").innerText = document.getElementById("folha-instituicao").value.toUpperCase();
+  document.getElementById("folha-preview-departamento").innerText = document.getElementById("folha-departamento").value.toUpperCase();
+  document.getElementById("folha-preview-curso").innerText = document.getElementById("folha-curso").value.toUpperCase();
+  document.getElementById("folha-preview-autor").innerText = document.getElementById("folha-autor").value.toUpperCase();
+  document.getElementById("folha-preview-titulo").innerText = document.getElementById("folha-titulo").value.toUpperCase();
+  document.getElementById("folha-preview-subtitulo").innerText = document.getElementById("folha-subtitulo").value;
+  document.getElementById("folha-preview-finalidade").innerText = document.getElementById("folha-finalidade").value;
+  document.getElementById("folha-preview-orientador").innerText = "Orientador: " + document.getElementById("folha-orientador").value;
+  document.getElementById("folha-preview-coorientador").innerText = document.getElementById("folha-coorientador").value ? "Coorientador: " + document.getElementById("folha-coorientador").value : "";
+  document.getElementById("folha-preview-cidade").innerText = document.getElementById("folha-cidade").value.toUpperCase();
+  document.getElementById("folha-preview-ano").innerText = document.getElementById("folha-ano").value;
+}
+
 function adicionarCapitulo() {
   const container = document.getElementById("capitulos-container");
   const total = container.querySelectorAll(".capitulo").length + 1;
