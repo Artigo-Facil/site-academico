@@ -44,12 +44,18 @@ label {
   font-weight: bold;
 }
 
-input {
+input, textarea {
   width: 100%;
   padding: 8px;
   font-size: 14px;
   margin-top: 5px;
   box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
 }
 
 button:disabled {
@@ -61,7 +67,7 @@ button:disabled {
   width: 595px;
   height: 842px;
   background: white;
-  margin: 0 auto 40px;
+  margin: 40px auto;
   padding: 3cm 2cm 2cm 3cm;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;
