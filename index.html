@@ -2,12 +2,12 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Capa ABNT - Visualização</title>
+  <title>Site Acadêmico ABNT</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-  <!-- MENU FIXO HORIZONTAL -->
+
   <nav class="menu">
     <button onclick="mostrarSecao('capa')">📄 Capa</button>
     <button onclick="mostrarSecao('folha')">📝 Rosto</button>
@@ -23,48 +23,36 @@
     <button onclick="mostrarSecao('anexos')">📂 Anexos</button>
   </nav>
 
-  <!-- SEÇÃO: CAPA -->
+  <!-- CAPA -->
   <div class="formulario" id="secao-capa">
-    <h2>Preencha os dados da capa</h2>
-    <label for="logoUrl">URL da logo (PNG/JPG):</label>
+    <h2>Capa</h2>
+    <label for="logoUrl">URL da logo:</label>
     <input type="text" id="logoUrl" oninput="atualizarCapa()">
-
     <div style="margin-top: 10px;">
-      <button id="btn-aumentar" onclick="ajustarLogo(+10)">Aumentar Logo</button>
+      <button id="btn-aumentar" onclick="ajustarLogo(10)">Aumentar Logo</button>
       <button id="btn-diminuir" onclick="ajustarLogo(-10)">Diminuir Logo</button>
     </div>
-
-    <label for="instituicao">Nome da Instituição:</label>
+    <label for="instituicao">Instituição:</label>
     <input type="text" id="instituicao" oninput="atualizarCapa()">
-
-    <label for="departamento">Departamento/Unidade:</label>
+    <label for="departamento">Departamento:</label>
     <input type="text" id="departamento" oninput="atualizarCapa()">
-
-    <label for="curso">Curso ou Tipo de Curso:</label>
+    <label for="curso">Curso:</label>
     <input type="text" id="curso" oninput="atualizarCapa()">
-
-    <label for="autor">Nome do Autor:</label>
+    <label for="autor">Autor:</label>
     <input type="text" id="autor" oninput="atualizarCapa()">
-
-    <label for="titulo">Título do Trabalho:</label>
+    <label for="titulo">Título:</label>
     <input type="text" id="titulo" oninput="atualizarCapa()">
-
-    <label for="subtitulo">Subtítulo (opcional):</label>
+    <label for="subtitulo">Subtítulo:</label>
     <input type="text" id="subtitulo" oninput="atualizarCapa()">
-
     <label for="cidade">Cidade:</label>
     <input type="text" id="cidade" oninput="atualizarCapa()">
-
     <label for="ano">Ano:</label>
     <input type="text" id="ano" oninput="atualizarCapa()">
-
-    <button onclick="gerarPDF()" style="margin-top: 20px;">Exportar como PDF</button>
   </div>
 
-  <!-- VISUALIZAÇÃO DA CAPA -->
   <div class="capa-preview" id="preview">
     <div class="capa-conteudo">
-      <img id="preview-logo" style="display: none;">
+      <img id="preview-logo" style="display:none;">
       <div class="bloco" id="preview-instituicao"></div>
       <div class="bloco" id="preview-departamento"></div>
       <div class="bloco" id="preview-curso"></div>
@@ -79,60 +67,46 @@
     </div>
   </div>
 
-  <!-- SEÇÃO: FOLHA DE ROSTO -->
+  <!-- FOLHA DE ROSTO -->
   <div class="formulario" id="secao-folha" style="display:none;">
-    <h2>Preencha os dados da folha de rosto</h2>
-    <label for="folha-instituicao">Nome da Instituição:</label>
+    <h2>Folha de Rosto</h2>
+    <label for="folha-instituicao">Instituição:</label>
     <input type="text" id="folha-instituicao" oninput="atualizarFolha()">
-
-    <label for="folha-departamento">Departamento (opcional):</label>
+    <label for="folha-departamento">Departamento:</label>
     <input type="text" id="folha-departamento" oninput="atualizarFolha()">
-
     <label for="folha-curso">Curso:</label>
     <input type="text" id="folha-curso" oninput="atualizarFolha()">
-
-    <label for="folha-autor">Nome do Autor:</label>
+    <label for="folha-autor">Autor(es):</label>
     <input type="text" id="folha-autor" oninput="atualizarFolha()">
-
-    <label for="folha-titulo">Título do Trabalho:</label>
+    <label for="folha-titulo">Título:</label>
     <input type="text" id="folha-titulo" oninput="atualizarFolha()">
-
-    <label for="folha-subtitulo">Subtítulo (opcional):</label>
+    <label for="folha-subtitulo">Subtítulo:</label>
     <input type="text" id="folha-subtitulo" oninput="atualizarFolha()">
-
-    <label for="folha-finalidade">Natureza e objetivo do trabalho:</label>
+    <label for="folha-finalidade">Finalidade:</label>
     <textarea id="folha-finalidade" oninput="atualizarFolha()"></textarea>
-
     <label for="folha-orientador">Orientador:</label>
     <input type="text" id="folha-orientador" oninput="atualizarFolha()">
-
-    <label for="folha-coorientador">Coorientador (opcional):</label>
+    <label for="folha-coorientador">Coorientador:</label>
     <input type="text" id="folha-coorientador" oninput="atualizarFolha()">
-
     <label for="folha-cidade">Cidade:</label>
     <input type="text" id="folha-cidade" oninput="atualizarFolha()">
-
     <label for="folha-ano">Ano:</label>
     <input type="text" id="folha-ano" oninput="atualizarFolha()">
   </div>
 
-  <!-- VISUALIZAÇÃO DA FOLHA DE ROSTO -->
-  <div class="capa-preview" id="preview-folha">
+  <div class="capa-preview folha-rosto" id="preview-folha">
     <div class="capa-conteudo">
-      <div class="bloco" id="folha-preview-instituicao"></div>
-      <div class="bloco" id="folha-preview-departamento"></div>
-      <div class="bloco" id="folha-preview-curso"></div>
-      <div style="height: 48px;"></div>
+      <div style="height: 96px;"></div>
       <div class="bloco" id="folha-preview-autor"></div>
-      <div style="height: 256px;"></div>
-      <div class="bloco" id="folha-preview-titulo"></div>
+      <div style="height: 160px;"></div>
+      <div class="bloco" id="folha-preview-titulo" style="font-weight: bold;"></div>
       <div class="bloco" id="folha-preview-subtitulo" style="font-style: italic;"></div>
-      <div style="height: 64px;"></div>
-      <div class="bloco" id="folha-preview-finalidade"></div>
-      <div style="height: 64px;"></div>
+      <div style="height: 120px;"></div>
+      <div class="bloco" id="folha-preview-finalidade" style="max-width: 75%; font-size: 11pt;"></div>
+      <div style="height: 40px;"></div>
       <div class="bloco" id="folha-preview-orientador"></div>
       <div class="bloco" id="folha-preview-coorientador"></div>
-      <div style="height: 120px;"></div>
+      <div style="flex-grow: 1;"></div>
       <div class="bloco" id="folha-preview-cidade"></div>
       <div class="bloco" id="folha-preview-ano"></div>
     </div>
