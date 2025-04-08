@@ -27,7 +27,7 @@
   <div class="formulario" id="secao-capa">
     <h2>Preencha os dados da capa</h2>
     <label for="logoUrl">URL da logo (PNG/JPG):</label>
-    <input type="text" id="logoUrl" placeholder="https://exemplo.com/logo.png" oninput="atualizarCapa()">
+    <input type="text" id="logoUrl" oninput="atualizarCapa()">
 
     <div style="margin-top: 10px;">
       <button id="btn-aumentar" onclick="ajustarLogo(+10)">Aumentar Logo</button>
@@ -61,40 +61,6 @@
     <button onclick="gerarPDF()" style="margin-top: 20px;">Exportar como PDF</button>
   </div>
 
-  <!-- SEÇÕES VAZIAS -->
-  <div class="formulario" id="secao-folha" style="display:none;"><h2>Folha de Rosto (em breve)</h2></div>
-  <div class="formulario" id="secao-dedicatoria" style="display:none;"><h2>Dedicatória (em breve)</h2></div>
-  <div class="formulario" id="secao-agradecimentos" style="display:none;"><h2>Agradecimentos (em breve)</h2></div>
-  <div class="formulario" id="secao-resumo" style="display:none;"><h2>Resumo (em breve)</h2></div>
-  <div class="formulario" id="secao-sumario" style="display:none;"><h2>Sumário (em breve)</h2></div>
-  <div class="formulario" id="secao-introducao" style="display:none;"><h2>Introdução (em breve)</h2></div>
-
-  <!-- DESENVOLVIMENTO COM CAPÍTULOS -->
-  <div class="formulario" id="secao-desenvolvimento" style="display:none;">
-    <h2>Desenvolvimento</h2>
-    <div id="capitulos-container">
-      <div class="capitulo">
-        <h3>Capítulo 1</h3>
-        <textarea placeholder="Conteúdo do Capítulo 1..."></textarea>
-      </div>
-      <div class="capitulo">
-        <h3>Capítulo 2</h3>
-        <textarea placeholder="Conteúdo do Capítulo 2..."></textarea>
-      </div>
-      <div class="capitulo">
-        <h3>Capítulo 3</h3>
-        <textarea placeholder="Conteúdo do Capítulo 3..."></textarea>
-      </div>
-    </div>
-    <button onclick="adicionarCapitulo()">➕ Adicionar Capítulo</button>
-  </div>
-
-  <!-- DEMAIS SEÇÕES -->
-  <div class="formulario" id="secao-conclusao" style="display:none;"><h2>Conclusão (em breve)</h2></div>
-  <div class="formulario" id="secao-referencias" style="display:none;"><h2>Referências (em breve)</h2></div>
-  <div class="formulario" id="secao-apendices" style="display:none;"><h2>Apêndices (em breve)</h2></div>
-  <div class="formulario" id="secao-anexos" style="display:none;"><h2>Anexos (em breve)</h2></div>
-
   <!-- VISUALIZAÇÃO DA CAPA -->
   <div class="capa-preview" id="preview">
     <div class="capa-conteudo">
@@ -110,6 +76,65 @@
       <div style="height: 320px;"></div>
       <div class="bloco" id="preview-cidade"></div>
       <div class="bloco" id="preview-ano"></div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO: FOLHA DE ROSTO -->
+  <div class="formulario" id="secao-folha" style="display:none;">
+    <h2>Preencha os dados da folha de rosto</h2>
+    <label for="folha-instituicao">Nome da Instituição:</label>
+    <input type="text" id="folha-instituicao" oninput="atualizarFolha()">
+
+    <label for="folha-departamento">Departamento (opcional):</label>
+    <input type="text" id="folha-departamento" oninput="atualizarFolha()">
+
+    <label for="folha-curso">Curso:</label>
+    <input type="text" id="folha-curso" oninput="atualizarFolha()">
+
+    <label for="folha-autor">Nome do Autor:</label>
+    <input type="text" id="folha-autor" oninput="atualizarFolha()">
+
+    <label for="folha-titulo">Título do Trabalho:</label>
+    <input type="text" id="folha-titulo" oninput="atualizarFolha()">
+
+    <label for="folha-subtitulo">Subtítulo (opcional):</label>
+    <input type="text" id="folha-subtitulo" oninput="atualizarFolha()">
+
+    <label for="folha-finalidade">Natureza e objetivo do trabalho:</label>
+    <textarea id="folha-finalidade" oninput="atualizarFolha()"></textarea>
+
+    <label for="folha-orientador">Orientador:</label>
+    <input type="text" id="folha-orientador" oninput="atualizarFolha()">
+
+    <label for="folha-coorientador">Coorientador (opcional):</label>
+    <input type="text" id="folha-coorientador" oninput="atualizarFolha()">
+
+    <label for="folha-cidade">Cidade:</label>
+    <input type="text" id="folha-cidade" oninput="atualizarFolha()">
+
+    <label for="folha-ano">Ano:</label>
+    <input type="text" id="folha-ano" oninput="atualizarFolha()">
+  </div>
+
+  <!-- VISUALIZAÇÃO DA FOLHA DE ROSTO -->
+  <div class="capa-preview" id="preview-folha">
+    <div class="capa-conteudo">
+      <div class="bloco" id="folha-preview-instituicao"></div>
+      <div class="bloco" id="folha-preview-departamento"></div>
+      <div class="bloco" id="folha-preview-curso"></div>
+      <div style="height: 48px;"></div>
+      <div class="bloco" id="folha-preview-autor"></div>
+      <div style="height: 256px;"></div>
+      <div class="bloco" id="folha-preview-titulo"></div>
+      <div class="bloco" id="folha-preview-subtitulo" style="font-style: italic;"></div>
+      <div style="height: 64px;"></div>
+      <div class="bloco" id="folha-preview-finalidade"></div>
+      <div style="height: 64px;"></div>
+      <div class="bloco" id="folha-preview-orientador"></div>
+      <div class="bloco" id="folha-preview-coorientador"></div>
+      <div style="height: 120px;"></div>
+      <div class="bloco" id="folha-preview-cidade"></div>
+      <div class="bloco" id="folha-preview-ano"></div>
     </div>
   </div>
 
